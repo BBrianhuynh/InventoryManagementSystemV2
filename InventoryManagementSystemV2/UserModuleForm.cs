@@ -36,7 +36,7 @@ namespace InventoryManagementSystemV2
                 }
                 if (MessageBox.Show("Are you sure you want to save this user?", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
                 {
-                    cmd = new SqlCommand("INSERT INTO TUser(username,fullname,password,phone)VALUES(@username,@fullname,@password,@phone",con);
+                    cmd = new SqlCommand("INSERT INTO TUser(username,fullname,password,phone)VALUES(@username,@fullname,@password,@phone)",con);
                     cmd.Parameters.AddWithValue("@username", txtUsername.Text);
                     cmd.Parameters.AddWithValue("@fullname", txtFullname.Text);
                     cmd.Parameters.AddWithValue("@password", txtPassword.Text);
