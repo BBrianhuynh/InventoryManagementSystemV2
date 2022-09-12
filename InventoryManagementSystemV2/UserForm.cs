@@ -50,19 +50,30 @@ namespace InventoryManagementSystemV2
 
                 userModule.button1.Enabled = false;
                 userModule.button2.Enabled = true;
+                userModule.txtUsername.Enabled = false;
                 userModule.ShowDialog();
             }
-            else if(colName == "Delete")
+            else if(colName == "Remove")
             {
-                if(MessageBox.Show("Are you sure you want to delete this year?","Delete Record",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if(MessageBox.Show("Are you sure you want to remove this user?","Delete Record",MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     con.Open();
-                    cmd = new SqlCommand("DELETE FROM TUser WHERE phone LIKE '" + dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString() + "'", con);
+                    cmd = new SqlCommand("DELETE FROM TUser WHERE username LIKE '" + dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString() + "'", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("Record has been successfully deleted");
                 }
             }
+            LoadUser();
+        }
+
+        private void customerButton1_Click(object sender, EventArgs e)
+        {
+            UserModuleForm userModule = new UserModuleForm();
+            userModule.button1.Enabled = true;
+            userModule.button2.Enabled = false;
+            userModule.ShowDialog();
+            LoadUser();
         }
     }
 }

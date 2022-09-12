@@ -57,6 +57,8 @@ namespace InventoryManagementSystemV2
         private void button3_Click(object sender, EventArgs e)
         {
             clear();
+            button1.Enabled = true;
+            button2.Enabled = false;
         }
 
         public void clear()
@@ -66,6 +68,29 @@ namespace InventoryManagementSystemV2
             txtPassword.Clear();
             txtRepassword.Clear();
             txtPhone.Clear();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to update this user?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    cmd = new SqlCommand("Update tUser SET fullname = @fullname, password=@password, phone=@phone WHERE username LIKE '" + txtUsername.Text + "' ", con);
+                    cmd.Parameters.AddWithValue("@fullname", txtFullname.Text);
+                    cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+                    cmd.Parameters.AddWithValue("@phone", txtPassword.Text);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("User has been successfully updated!");
+                    this.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

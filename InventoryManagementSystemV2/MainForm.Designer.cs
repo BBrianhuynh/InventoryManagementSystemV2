@@ -36,8 +36,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.ordersButton = new InventoryManagementSystemV2.customerButton();
             this.usersButton = new InventoryManagementSystemV2.customerButton();
             this.categoriesButton = new InventoryManagementSystemV2.customerButton();
@@ -55,6 +56,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.ordersButton);
             this.panel1.Controls.Add(this.label5);
@@ -129,23 +131,33 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Inventory Management System";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 400);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 50);
-            this.panel2.TabIndex = 2;
-            // 
             // mainPanel
             // 
             this.mainPanel.Location = new System.Drawing.Point(0, 84);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(800, 319);
+            this.mainPanel.Size = new System.Drawing.Size(800, 363);
             this.mainPanel.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(0, 440);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 10);
+            this.panel2.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(12, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(145, 35);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "MyManage";
             // 
             // ordersButton
             // 
@@ -217,7 +229,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "0";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordersButton)).EndInit();
@@ -234,7 +246,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private customerButton productButton;
-        private System.Windows.Forms.Panel panel2;
         private customerButton usersButton;
         private customerButton categoriesButton;
         private customerButton customerButton;
@@ -245,5 +256,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label7;
     }
 }
