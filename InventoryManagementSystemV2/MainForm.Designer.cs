@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.ordersButton = new InventoryManagementSystemV2.customerButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.mainPanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.ordersButton = new InventoryManagementSystemV2.customerButton();
             this.usersButton = new InventoryManagementSystemV2.customerButton();
             this.categoriesButton = new InventoryManagementSystemV2.customerButton();
             this.productButton = new InventoryManagementSystemV2.customerButton();
             this.customerButton = new InventoryManagementSystemV2.customerButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordersButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersButton)).BeginInit();
@@ -75,6 +75,17 @@
             this.panel1.Size = new System.Drawing.Size(800, 86);
             this.panel1.TabIndex = 1;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label7.Location = new System.Drawing.Point(12, 23);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(145, 35);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "MyManage";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -83,6 +94,18 @@
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 6;
             this.label6.Text = "Orders";
+            // 
+            // ordersButton
+            // 
+            this.ordersButton.Image = ((System.Drawing.Image)(resources.GetObject("ordersButton.Image")));
+            this.ordersButton.imageHover = ((System.Drawing.Image)(resources.GetObject("ordersButton.imageHover")));
+            this.ordersButton.imageNormal = ((System.Drawing.Image)(resources.GetObject("ordersButton.imageNormal")));
+            this.ordersButton.Location = new System.Drawing.Point(606, 23);
+            this.ordersButton.Name = "ordersButton";
+            this.ordersButton.Size = new System.Drawing.Size(47, 42);
+            this.ordersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ordersButton.TabIndex = 4;
+            this.ordersButton.TabStop = false;
             // 
             // label5
             // 
@@ -119,57 +142,6 @@
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Product";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(3, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Inventory Management System";
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Location = new System.Drawing.Point(0, 84);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(800, 363);
-            this.mainPanel.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(0, 440);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(800, 10);
-            this.panel2.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sitka Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label7.Location = new System.Drawing.Point(12, 23);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 35);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "MyManage";
-            // 
-            // ordersButton
-            // 
-            this.ordersButton.Image = ((System.Drawing.Image)(resources.GetObject("ordersButton.Image")));
-            this.ordersButton.imageHover = ((System.Drawing.Image)(resources.GetObject("ordersButton.imageHover")));
-            this.ordersButton.imageNormal = ((System.Drawing.Image)(resources.GetObject("ordersButton.imageNormal")));
-            this.ordersButton.Location = new System.Drawing.Point(606, 23);
-            this.ordersButton.Name = "ordersButton";
-            this.ordersButton.Size = new System.Drawing.Size(47, 42);
-            this.ordersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ordersButton.TabIndex = 4;
-            this.ordersButton.TabStop = false;
             // 
             // usersButton
             // 
@@ -219,6 +191,35 @@
             this.customerButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.customerButton.TabIndex = 3;
             this.customerButton.TabStop = false;
+            this.customerButton.Click += new System.EventHandler(this.customerButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Sitka Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label3.Location = new System.Drawing.Point(3, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(243, 21);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Inventory Management System";
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Location = new System.Drawing.Point(0, 84);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(800, 363);
+            this.mainPanel.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panel2.ForeColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(0, 440);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(800, 10);
+            this.panel2.TabIndex = 2;
             // 
             // MainForm
             // 

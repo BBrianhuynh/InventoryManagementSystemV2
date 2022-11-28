@@ -76,10 +76,10 @@ namespace InventoryManagementSystemV2
             {
                 if (MessageBox.Show("Are you sure you want to update this user?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    cmd = new SqlCommand("Update tUser SET fullname = @fullname, password=@password, phone=@phone WHERE username LIKE '" + txtUsername.Text + "' ", con);
+                    cmd = new SqlCommand("Update TUser SET fullname = @fullname, password=@password, phone=@phone WHERE username LIKE '" + txtUsername.Text + "' ", con);
                     cmd.Parameters.AddWithValue("@fullname", txtFullname.Text);
                     cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-                    cmd.Parameters.AddWithValue("@phone", txtPassword.Text);
+                    cmd.Parameters.AddWithValue("@phone", txtPhone.Text);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();

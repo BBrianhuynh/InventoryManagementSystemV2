@@ -48,9 +48,10 @@ namespace InventoryManagementSystemV2
                 userModule.txtPassword.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
                 userModule.txtPhone.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
 
+                userModule.txtRepassword.Enabled = false;
+                userModule.label7.Enabled = false;
                 userModule.button1.Enabled = false;
                 userModule.button2.Enabled = true;
-                userModule.txtUsername.Enabled = false;
                 userModule.ShowDialog();
             }
             else if(colName == "Remove")
